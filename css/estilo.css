@@ -1,17 +1,69 @@
 
+/*Para PC* Utiliza media queries para manejar dos tamaños Desktop: con ancho de 900px o más y móvil con menos de 900px.*/
+@media screen and (min-width:900px) {
+/*Para el header*/
+header h1{
+  text-align: left !important;
+  font-size: 2vw !important;
+  display: inline;
+padding-left: 5vw;
+vertical-align:middle;
+padding-bottom: 2vw;
 
+}
+header{
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+}
+#menu-principal {
+  font-size: 1.5vw !important;
+  text-align: right !important;
+  padding-left: 10vw;
+  padding-bottom: 2vw !important;
+  display: inline-block;
+  vertical-align:middle;
+
+float: right;
+margin-right: 2vw;
+
+}
+#imagen-secundaria{
+  display: flex;
+  flex-direction: row;
+}
+#imagen-derecha,#imagen-izquierda{
+  width: 50%;
+}
+#contenido{
+  max-width: 900px;
+  margin: auto;
+
+}
+footer{
+  display: flex;
+  flex-direction: row;
+}
+footer h2{
+  font-size: 2vw !important;
+}
+footer li,footer a{
+  font-size: 1vw !important;
+  
+}
+footer img{
+  width: 1.5vw !important;
+
+#contacto,#terminos,#redes-sociales,#derechos{
+  width: 25%;
+
+}
+}
 body{
   background-color: #02010a;
   font-family: 'Dancing Script';
+  align-content: center;
 }
 
-#contenido{
-  width: 100%;
-}
-#contenido * {
-  margin-top: 0;
-  margin-bottom: 0;
-}
 header{
   background-color:  #5b7989;
   border-radius: 10px 10px 0px 0px;
@@ -27,23 +79,41 @@ header h1{
 #menu-principal{
   text-align: center;
   font-size: 6vw;
+  padding-bottom: 6vw;
+  word-spacing: 1vw;
 }
 #menu-principal ul li{
   display: inline;
 
-
 }
 #menu-principal ul {
   margin: 0 ;
-  padding: 0;
 
+  padding-left: 0;
+}
+#menu-principal a{
+  text-decoration: none;
+  color: white;
+}
+#menu-principal a:link{
+  text-decoration: underline;
+  color: white;
 }
 
-img{
+/*Seccion de contenido e imagen-principal*/
+#contenido{
+  width: 100%;
+}
+#contenido * {  /*Eliminado espacio fantasma que aparece entre DIVS*/
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#imagen-principal img,#imagen-secundaria img{
   box-shadow: 2px 2px #02010a;
   width: 100%;
-  margin:  1vh 1vh 1vh 1vh !important;
-
+  margin:  1vw 1vw 1vw 1vw !important; /* Para solucionar espacio vertical que aparece entre los DIVS*/
+ transition: transform 1s;
 }
 #imagen-principal{
   background-color: #82c3a6;
@@ -53,18 +123,62 @@ img{
 
 #imagen-secundaria{
   background-color: #d5c75f ;
+  border: 1px;
 
 }
+#imagen-izquierda img:hover{/*  rotación de 10 grados cuando se coloca el puntero sobre ella*, color de sombra #82c3a6 y borde 2px*/
+transform: rotate(10deg);
+box-shadow: 2px 2px #82c3a6;
+border: 2px;
+}
+#imagen-derecha img:hover{/* traslación de 5px hacia arriba y 20px a la derecha  color de sombra #82c3a6 y borde 2px. */
+  transform: translate(20px,-5px);
+  box-shadow: 2px 2px #82c3a6;
+  border: 2px;
+}
+
 
 
 figure{
   text-align: center;
   font-size: 4vw;
 }
-
+/*Relacionados con el footer*/
 
 footer{
   background-color: #C6d5c5;
   border-radius: 0px 0px 10px 10px;
 
+}
+.contacto ul{
+  list-style: none;
+}
+.contacto,.terminos,.redes-sociales,.derechos{
+  padding-top: 3vw;
+  padding-bottom:3vw;
+}
+.terminos ul{
+  list-style: none;
+}
+.redes-sociales ul{
+  list-style: none;
+}
+.derechos ul{
+  list-style: none;
+}
+footer img{
+  width:4vw;
+ padding-right: 1vw;
+
+}
+footer a{
+  text-decoration: none;
+  color: inherit;
+  font-size: 4vw;
+}
+footer h2{
+  font-size: 8vw;
+}
+footer li{
+  font-size: 4vw;
 }
