@@ -67,11 +67,12 @@
   }
   /*Pagina de paisajes*/
 
-.galeria{
+.galeria1,.galeria2{
   display: flex;
 }
-.galeria div{
+.galeria1 div,.galeria2 div{
   width: 33.3%;
+
 }
 }
 
@@ -112,12 +113,13 @@ header h1{
 
   padding-left: 0;
 }
-#menu-principal a{
-  text-decoration: none;
+#menu-principal a:visited{
+  text-decoration: none !important;
   color: white;
 }
-#menu-principal a:link{
-  text-decoration: underline;
+
+#menu-principal a{
+
   color: white;
 }
 
@@ -204,11 +206,28 @@ footer li{
   font-size: 4vw;
 }
 /* Para las paginas secundarias*/
-.galeria{
+#galeriaContenedor{
   background-color: #d5c75f ;
   border: 1px;
 
 }
-.galeria div img{
+#galeriaContenedor img{
   width: 100%;
+  box-shadow: 2px 2px #02010a;
 }
+.galeria1 div,.galeria2 div{
+
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+}
+.galeria1 div:nth-child(1) img{
+  -webkit-filter:blur(10px);
+  filter: blur(90%);
+}
+.galeria1 div:nth-child(2) img,.galeria2 div:nth-child(odd) img{
+  -webkit-filter:grayscale(100%);
+  filter: grayscale(100%);}
+.galeria1 div:nth-child(3) img{
+    -webkit-filter:sepia(90%);
+    filter: sepia(90%);
+  }
